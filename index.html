@@ -9,12 +9,35 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
     <title>Ristorante Con Fusion</title>
 </head>
 
 <body>
-
+    <!--basic navvigation bar-->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+        <div class="container">
+            <!--toggler button with three horizontal lines
+            Creating a responsive navigation bar
+We would like the navigation bar elements to collapse for shorter screens, to be replaced by a toggle button so that the items can be toggled on or off when required on small and extra small screens. This can be achieved by adding the following code to the navigation bar, just below the container div.This creates a button with three horizontal lines. For medium to extra large screens, this button is hidden. For small and extra small screens, this button becomes visible. This button will act as the toggle for the navbar items.-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--brand name-->
+           <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+           <!--To hide the items from the navigation bar for the small screens, we need to enclose the ul within another div
+        By doing this, we are specifying that this div with collapse and navbar-collapse classes and with the id Navbar will be collapsed on small and xs screens, but can be toggled on or off when the toggle button is clicked. Note the use of data-toggle="collapse" data-target="#Navbar" within the button above. This specifies that the menu items are collapsed on small and xs screens when the toggle button is visible. They can be displayed or hidden by clicking the toggle button.-->
+           <div class="collapse navbar-collapse" id="Navbar">
+               <ul class="navbar-nav mr-auto">
+                <!--nav bar contents-->
+                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header class="jumbotron">
         <div class="container ">
             <div class="row row-header">
@@ -69,7 +92,7 @@
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
                         <li><a href="#">Menu</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>

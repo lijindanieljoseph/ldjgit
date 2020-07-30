@@ -15,8 +15,11 @@
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
+<<<<<<< HEAD
+=======
     "bootstrap-social": "^5.1.1",
     "font-awesome": "^4.7.0",
+>>>>>>> a55da3f079eafb286b8bf48a26d26f93533e9b86
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
   }

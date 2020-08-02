@@ -36,7 +36,7 @@ body{
 /* navigation bar displayed in darker purple color, instead of the current color. In addition, when we use the fixed navigation bar, we should give the body of the page an upper margin of 50px, so that the top 50px of the page does not get hidden under the navigation bar. We accomplish these by adding these CSS customisations to the styles.css file
 */
 .navbar-dark {
-     background-color: #4smalld0aeb;
+  background-color: #4d0aeb;
 }
 .tab-content {
   border-left: 1px solid #ddd;

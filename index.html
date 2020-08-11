@@ -38,9 +38,54 @@ We would like the navigation bar elements to collapse for shorter screens, to be
                 <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                 <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <!--add login icon.use a span with the class navbar-text. This is what allows me to include a link into the navbar and show it as text.-->
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                    <span class="fa fa-sign-in"></span> Login</a>
+                </span>
             </div>
         </div>
     </nav>
+    <!--add model that is sudden box that appear as pop up..in this it will be when login button is click then show the login form-->
+    <!-- create a modal, I will start off by saying div ID login modal. So, we give an ID to this modal so that it can be triggered from the navbar link and then class as "modal fade". So you see that the class is modal and fade means that when the modal is brought onto the screen, it'll fade onto the screen and the role is as a dialog. So, which means that it is displayed on top of the page. -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <!--create the second div with the class as modal-dialog and then inside here we will define the content of the actual modal here and close off the div. And so, this is to be the modal content will be structured here. So, inside this modal dialog we will create another div with the class modal content and close off the div and a typical modal will contain a modal-header. So, that's where the next div is going to host.-->
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <!-- in the header we are going to put in a button, a cross-button in the modal which when clicked will dismiss the modal. introduce a button with the type button and class close. So, you see that this is a button that is used to close the modal and then you will say, data-dismiss and then modal. So, what this means is that this particular button when clicked will dismiss the modal from the screen. And this button, I'm going to use the times,will display as a cross in the modals here-->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                    <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
     <header class="jumbotron">
         <div class="container ">
             <div class="row row-header">
@@ -53,7 +98,10 @@ We would like the navigation bar elements to collapse for shorter screens, to be
                     <img src="./img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a href="#reserve"><button type="button" class="btn btn-warning btn-sm btn-block">Reserve Table</button></a>
+                    <!--add button with name Reserve Table then add tooltip means when click that button additional show more details..in this the tooltp that shows is Call us at with phone number.it work with javascript function which writen in under script content.add a data-toggle, data-placement and a title attribute to the <a> tag in order to introduce a tooltip.-->
+                    <a role="button" class="btn btn-block nav-link btn-warning"
+                    data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
+                    data-placement="bottom" href="#reserveform">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -230,6 +278,12 @@ We would like the navigation bar elements to collapse for shorter screens, to be
  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script> 
  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+ <!--tooltip needs to be activated by adding a small Javascript code to the bottom of the page -->
+ <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
 
 </body>
 
